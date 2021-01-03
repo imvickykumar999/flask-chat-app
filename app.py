@@ -15,14 +15,14 @@ socketio = SocketIO(app)
 login_manager = LoginManager()
 login_manager.login_view = 'login'
 login_manager.init_app(app)
-
+# print('.......................', current_user)
 
 @app.route('/')
 def home():
     rooms = []
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         rooms = get_rooms_for_user(current_user.username)
-    return render_template("index.html", rooms=rooms)
+    return render_template("chat.html", rooms=rooms)
 
 
 @app.route('/login', methods=['GET', 'POST'])
