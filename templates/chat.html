@@ -16,5 +16,14 @@
         {% endfor %}
     </ul>
 {% endif %}
+
+<div class="chat-url">
+<!--   <a style="color:red;" class="chat-link" href="{{url_for('news')}}">Exit from Chat</a> -->
+  <a style="color:red;" class="chat-link" href="{{url_for('login')}}">login</a>
+  <a style="color:red;" class="chat-link" href="{{url_for('signup')}}">signup</a>
+  <a style="color:red;" class="chat-link" href="{{url_for('logout')}}">logout</a>
+  <a style="color:red;" class="chat-link" href="{{url_for('create_room')}}">create_room</a>
+</div>
+
 </body>
 </html>
