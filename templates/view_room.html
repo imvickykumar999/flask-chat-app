@@ -34,7 +34,9 @@
 //     const socket = io.connect("https://vickschat.herokuapp.com");
 //     const socket = io.connect("http://127.0.0.1:5000");
 
-    const socket = io.connect("ws://vickschat.herokuapp.com:17079/socket.io/?EIO=4&transport=websocket");
+    const socket = io.connect("https://vickschat.herokuapp.com:17079/socket.io/?transport=websocket");
+//     var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port, { transports: ['websocket'] })
+
 
     socket.on('connect', function () {
         socket.emit('join_room', {
